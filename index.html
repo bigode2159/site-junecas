@@ -1,23 +1,8 @@
-<article class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-5xl">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">
-            Sobre o Projeto Vai de Ônibus!
-        </h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-            O <strong>Vai de Ônibus!</strong> é uma plataforma digital desenvolvida para melhorar a experiência do transporte público em cidades médias e pequenas do Paraná. 
-            Através da tecnologia, oferecemos previsibilidade para passageiros e ferramentas de gestão para prefeituras, tornando o transporte mais eficiente, acessível e econômico.
-        </p>
-    </div>
-</article>
-E aqui está o seu código completo atualizado já com essa seção nova inserida dentro do <main>, antes do <footer>:
-
-html
-Copiar código
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vai de Ônibus! - Mobilidade Paraná</title>
     <!-- Carrega Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,7 +13,7 @@ Copiar código
             background-color: #f7f9fb;
         }
         .blue-gradient-bg {
-            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%); /* blue-700 to blue-500 */
         }
         .icon-bus::before {
             content: "🚌";
@@ -49,6 +34,7 @@ Copiar código
                 <a href="#home" class="text-xl font-extrabold text-gray-900">Vai de Ônibus!</a>
             </div>
             <div class="hidden md:flex space-x-6 font-medium">
+                <!-- O link "Proposta" agora leva diretamente para "Benefícios" -->
                 <a href="#beneficios" class="text-gray-600 hover:text-blue-600 transition">Proposta</a>
                 <a href="#beneficios" class="text-gray-600 hover:text-blue-600 transition">Benefícios</a>
                 <a href="#negocio" class="text-gray-600 hover:text-blue-600 transition">Negócio</a>
@@ -58,22 +44,115 @@ Copiar código
     </header>
 
     <main>
-        <!-- Seções existentes ... -->
-
-        <!-- (seções home, benefícios, negócio, sobre section, etc.) -->
-
-        <!-- NOVA SEÇÃO COM TAG <article> -->
-        <article class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 max-w-5xl">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">
-                    Sobre o Projeto Vai de Ônibus!
-                </h2>
-                <p class="text-gray-700 text-lg leading-relaxed">
-                    O <strong>Vai de Ônibus!</strong> é uma plataforma digital desenvolvida para melhorar a experiência do transporte público em cidades médias e pequenas do Paraná. 
-                    Através da tecnologia, oferecemos previsibilidade para passageiros e ferramentas de gestão para prefeituras, tornando o transporte mais eficiente, acessível e econômico.
+        <!-- 1. HOME (Visão Geral) - Hero -->
+        <section id="home" class="blue-gradient-bg text-white py-20 md:py-28">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-snug mb-4">
+                    Previsibilidade para o Passageiro, <span class="text-blue-200">Poder de Gestão para a Prefeitura.</span>
+                </h1>
+                <p class="text-lg sm:text-xl font-light max-w-3xl mx-auto mb-10">
+                    A plataforma completa que resolve a incerteza do transporte público em cidades de médio e pequeno porte do Paraná.
                 </p>
+
+                <!-- O botão "Ver Solução" agora leva diretamente para "Benefícios" -->
+                <a href="#beneficios" class="px-8 py-3 bg-white text-blue-600 rounded-lg shadow-xl hover:shadow-2xl hover:bg-gray-100 transition duration-300 font-bold text-lg">
+                    Ver Solução
+                </a>
             </div>
-        </article>
+        </section>
+        
+        <!-- A seção #proposta de blocos foi removida. -->
+
+        <!-- 2. BENEFÍCIOS (A Solução Resumida) -->
+        <section id="beneficios" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">Benefícios Chave</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Passageiro: Redução de Incerteza -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">✅</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Fim da Espera Incerta</h3>
+                        <p class="text-gray-700">O usuário sabe exatamente onde o ônibus está e o tempo de chegada. Notificações sobre desvios e atrasos eliminam a frustração e a perda de tempo.</p>
+                    </div>
+
+                    <!-- Gestor: Ação Imediata -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">⚙️</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Ação Estratégica Rápida</h3>
+                        <p class="text-gray-700">A lotação gera um alerta automático no painel do gestor, permitindo o envio imediato de um ônibus extra e o ajuste da frota em tempo real.</p>
+                    </div>
+
+                    <!-- Financeiro: Digitalização -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">💰</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Maior Eficiência Financeira</h3>
+                        <p class="text-gray-700">Digitalização do pagamento e dos relatórios de demanda, gerando dados precisos para subsidiar a tarifa e otimizar custos operacionais para as empresas.</p>
+                    </div>
+
+                    <!-- Foco: Cidades Menores -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">🏙️</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Solução Acessível e Local</h3>
+                        <p class="text-gray-700">Solução de baixo custo, feita sob medida para a realidade do Paraná e focada em cidades que são ignoradas pelos grandes concorrentes internacionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MODELO DE NEGÓCIO (Rentabilidade Simplificada) -->
+        <section id="negocio" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">Modelo de Receita (B2G e Escalável)</h2>
+                
+                <ul class="space-y-6 text-lg">
+                    <!-- Receita 1 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">1.</span>
+                        <p><strong class="font-semibold text-blue-700">Licença B2G:</strong> Venda de licença da plataforma de gestão e BI para Prefeituras e Órgãos Públicos.</p>
+                    </li>
+                    <!-- Receita 2 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">2.</span>
+                        <p><strong class="font-semibold text-blue-700">Publicidade Local:</strong> Espaços geo-localizados dentro do app para empresas e comércios da região.</p>
+                    </li>
+                    <!-- Receita 3 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">3.</span>
+                        <p><strong class="font-semibold text-blue-700">Comercialização de Dados:</strong> Relatórios anonimizados de fluxo de passageiros para planejamento urbano e varejo (B2B).</p>
+                    </li>
+                </ul>
+
+                <div class="mt-12 text-center p-6 bg-blue-600 rounded-xl shadow-xl text-white">
+                    <p class="text-xl font-bold">Nossa vantagem é ser uma <strong class="font-extrabold">solução de infraestrutura digital</strong> adaptada e de baixo custo, perfeita para o Paraná.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVAS SEÇÕES EXPLICANDO A TAG <section> -->
+        <section class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl font-extrabold mb-6 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">Sobre a Tag &lt;section&gt;</h2>
+
+                <!-- O que ela faz -->
+                <section class="bg-white p-6 rounded-xl shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">O que é a tag &lt;section&gt;?</h3>
+                    <p class="text-gray-700">A tag <code>&lt;section&gt;</code> é usada para agrupar conteúdos relacionados em blocos temáticos dentro de uma página HTML. Ela ajuda a estruturar o conteúdo e melhora a semântica do documento.</p>
+                </section>
+
+                <!-- Por que escolhi ela -->
+                <section class="bg-white p-6 rounded-xl shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold mb-3">Por que escolhi a tag &lt;section&gt;?</h3>
+                    <p class="text-gray-700">Escolhi a tag <code>&lt;section&gt;</code> porque ela permite organizar o conteúdo de forma clara e segmentada, facilitando a leitura tanto para usuários quanto para mecanismos de busca e leitores de tela.</p>
+                </section>
+
+                <!-- Importância pessoal -->
+                <section class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-3">Importância da tag &lt;section&gt; para mim</h3>
+                    <p class="text-gray-700">Para mim, a tag <code>&lt;section&gt;</code> é essencial para manter o código organizado, acessível e semanticamente correto, garantindo que o conteúdo seja compreendido de forma eficiente por todos os públicos.</p>
+                </section>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -83,9 +162,4 @@ Copiar código
                 <span class="icon-bus text-3xl text-blue-400"></span>
                 <p class="text-lg font-extrabold mt-1">Vai de Ônibus!</p>
             </div>
-            <p class="text-sm text-gray-400">Equipe Lucas, Henrique</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p class="text-sm text-gray-400">Equipe Lucas, Henrique
