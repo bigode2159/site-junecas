@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vai de Ônibus! - Mobilidade Paraná</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Global (Inter) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .blue-gradient-bg {
+            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%); /* blue-700 to blue-500 */
+        }
+        .icon-bus::before {
+            content: "🚌";
+        }
+        /* Garantindo espaço para o conteúdo principal */
+        main {
+            min-height: calc(100vh - 150px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar Simplificada -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 lg:px-8 flex justify-between items-center py-3">
+            <div class="flex items-center space-x-2">
+                <span class="icon-bus text-2xl text-blue-600"></span>
+                <a href="#home" class="text-xl font-extrabold text-gray-900">Vai de Ônibus!</a>
+            </div>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <!-- O link "Proposta" agora leva diretamente para "Benefícios" -->
+                <a href="#beneficios" class="text-gray-600 hover:text-blue-600 transition">Proposta</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-blue-600 transition">Benefícios</a>
+                <a href="#negocio" class="text-gray-600 hover:text-blue-600 transition">Negócio</a>
+            </div>
+            <a href="#beneficios" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition font-semibold">Saiba Mais</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. HOME (Visão Geral) - Hero -->
+        <section id="home" class="blue-gradient-bg text-white py-20 md:py-28">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-snug mb-4">
+                    Previsibilidade para o Passageiro, <span class="text-blue-200">Poder de Gestão para a Prefeitura.</span>
+                </h1>
+                <p class="text-lg sm:text-xl font-light max-w-3xl mx-auto mb-10">
+                    A plataforma completa que resolve a incerteza do transporte público em cidades de médio e pequeno porte do Paraná.
+                </p>
+
+                <!-- O botão "Ver Solução" agora leva diretamente para "Benefícios" -->
+                <a href="#beneficios" class="px-8 py-3 bg-white text-blue-600 rounded-lg shadow-xl hover:shadow-2xl hover:bg-gray-100 transition duration-300 font-bold text-lg">
+                    Ver Solução
+                </a>
+            </div>
+        </section>
+        
+        <!-- A seção #proposta de blocos foi removida. -->
+
+        <!-- 2. BENEFÍCIOS (A Solução Resumida) -->
+        <section id="beneficios" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">Benefícios Chave</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Passageiro: Redução de Incerteza -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">✅</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Fim da Espera Incerta</h3>
+                        <p class="text-gray-700">O usuário sabe exatamente onde o ônibus está e o tempo de chegada. Notificações sobre desvios e atrasos eliminam a frustração e a perda de tempo.</p>
+                    </div>
+
+                    <!-- Gestor: Ação Imediata -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">⚙️</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Ação Estratégica Rápida</h3>
+                        <p class="text-gray-700">A lotação gera um alerta automático no painel do gestor, permitindo o envio imediato de um ônibus extra e o ajuste da frota em tempo real.</p>
+                    </div>
+
+                    <!-- Financeiro: Digitalização -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">💰</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Maior Eficiência Financeira</h3>
+                        <p class="text-gray-700">Digitalização do pagamento e dos relatórios de demanda, gerando dados precisos para subsidiar a tarifa e otimizar custos operacionais para as empresas.</p>
+                    </div>
+
+                    <!-- Foco: Cidades Menores -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <span class="text-5xl block mb-4">🏙️</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Solução Acessível e Local</h3>
+                        <p class="text-gray-700">Solução de baixo custo, feita sob medida para a realidade do Paraná e focada em cidades que são ignoradas pelos grandes concorrentes internacionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MODELO DE NEGÓCIO (Rentabilidade Simplificada) -->
+        <section id="negocio" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-blue-800 border-b-4 border-blue-400 pb-2 inline-block">Modelo de Receita (B2G e Escalável)</h2>
+                
+                <ul class="space-y-6 text-lg">
+                    <!-- Receita 1 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">1.</span>
+                        <p><strong class="font-semibold text-blue-700">Licença B2G:</strong> Venda de licença da plataforma de gestão e BI para Prefeituras e Órgãos Públicos.</p>
+                    </li>
+                    <!-- Receita 2 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">2.</span>
+                        <p><strong class="font-semibold text-blue-700">Publicidade Local:</strong> Espaços geo-localizados dentro do app para empresas e comércios da região.</p>
+                    </li>
+                    <!-- Receita 3 -->
+                    <li class="p-4 bg-blue-50 rounded-lg shadow-md flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-blue-600">3.</span>
+                        <p><strong class="font-semibold text-blue-700">Comercialização de Dados:</strong> Relatórios anonimizados de fluxo de passageiros para planejamento urbano e varejo (B2B).</p>
+                    </li>
+                </ul>
+
+                <div class="mt-12 text-center p-6 bg-blue-600 rounded-xl shadow-xl text-white">
+                    <p class="text-xl font-bold">Nossa vantagem é ser uma <strong class="font-extrabold">solução de infraestrutura digital</strong> adaptada e de baixo custo, perfeita para o Paraná.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-3">
+                <span class="icon-bus text-3xl text-blue-400"></span>
+                <p class="text-lg font-extrabold mt-1">Vai de Ônibus!</p>
+            </div>
+            <p class="text-sm text-gray-400">Equipe Lucas, Henrique, Fernanda, Luiz e Thiago. Comprometidos com a mobilidade no Paraná.</p>
+            <p class="text-xs text-gray-500 mt-2">&copy; 2025 Vai de Ônibus! Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
